@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.tabla-container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: left;
+}
+
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-datos th,
+.tabla-datos td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-datos th {
+    background-color: #1d5675;
+    color: #fff;
+}
+
+.tabla-datos tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-datos tbody tr:hover {
+    background-color: #ddd;
+}
+
