@@ -10,11 +10,12 @@
     <div class="tabla-container">   
         <h2>PREGUNTA : 2</h2>
         <h3>2. Realice un ABC en PHP de las personas a cunetas bancarias, debe incluir la selección de la cuenta que la persona desee.</h3>
-            
+        <a href="index.php" class="boton-cerrar-sesion">CERRAR SESION</a>
         <?php 
             include "conexion.inc.php";                                   
         ?>
     </div>
+    
     <?php
         $email = $_GET['email'];
         $sql1 = "SELECT nombre, paterno, materno FROM persona WHERE email = '$email'";

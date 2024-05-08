@@ -2,7 +2,7 @@
 include "conexion.inc.php";
 
 $idCuenta = $_GET["idCuenta"];
-
+$email = $_GET["email"];
 $sql = "SELECT * FROM cuenta WHERE idCuenta ='" .$idCuenta."'";
 $resultado = mysqli_query($con, $sql);
 
@@ -20,7 +20,8 @@ $fila=mysqli_fetch_array($resultado);
 <body>
     <div class="container">
         <h1>EDITA TUS DATOS</h1>
-        <form action="guardaEdicion.php" method = "GET"> 
+        <form action="guardaEdicion.php" method="GET"> 
+            <input type="hidden" name="email" value="<?php echo $email; ?>">
             <label>Identificador de Cuenta: </label>           
             <input type="text" name = "idCuenta" value="<?php echo $fila['idCuenta']?>" readonly/>
             <label>Nro. de Cuenta: </label>
@@ -32,7 +33,7 @@ $fila=mysqli_fetch_array($resultado);
             <label>Departamento: </label>
             <input type="text" name = "departamento" value="<?php echo $fila['departamento']?>"/>
 
-            <input type="submit" name = "Guardar" value="GUARDAR"/>
+            <input type="submit" name = "Guardar" value="GUARDAR"/>            
             
         </form>
     </div>

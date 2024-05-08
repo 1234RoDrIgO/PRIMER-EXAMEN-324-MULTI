@@ -1,6 +1,6 @@
 <?php
 include "conexion.inc.php";
-
+$email = $_GET["email"];
 $idCuenta = $_GET["idCuenta"];
 
 $sql = "SELECT * FROM cuenta WHERE idCuenta ='" .$idCuenta."'";
@@ -21,6 +21,7 @@ $fila=mysqli_fetch_array($resultado);
     <div class="container">
         <h1>INTRODUCE TUS DATOS</h1>
         <form action="guardaCuentaAñadida.php" method = "GET"> 
+            <input type="hidden" name="email" value="<?php echo $email; ?>">
             <label>Identificador de Usuario: </label>           
             <input type="text" name = "idUsuario" value="<?php echo $fila['idUsuario']?>" readonly/>
             <label>Nro. de Cuenta: </label>
