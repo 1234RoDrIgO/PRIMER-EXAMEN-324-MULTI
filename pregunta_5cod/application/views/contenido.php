@@ -32,7 +32,7 @@
 			echo $cuenta->fCreacion;
 			echo "</td>";
 			echo "<td>";			
-			echo '<a href="' . base_url('welcome/eliminar/' . $cuenta->idCuenta) . '">Eliminar</a>';
+			echo '<a href="' . base_url('welcome/eliminar/' . $cuenta->idCuenta) . '" class = "boton-eliminar" >Eliminar</a>';
 			echo "</td>";
 			echo "</tr>";
 		}		

@@ -29,6 +29,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		color: #97310e;
 	}
 
+	.boton-eliminar, .boton-editar {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+	}
+
+	.boton-eliminar {
+		background-color: #dc3545; /* Rojo llamativo */
+	}
 	h1 {
 		color: #444;
 		background-color: transparent;
