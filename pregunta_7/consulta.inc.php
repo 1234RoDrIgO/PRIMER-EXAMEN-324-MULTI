@@ -1,4 +1,9 @@
 <?php
+$sql_t = "SELECT * FROM persona WHERE email = '$email'";
+$resultado3 = mysqli_query($con, $sql_t); 
+$verificar = mysqli_fetch_array($resultado3);
+
+if($verificar['tipoUsuario'] == 'admin'){
     $sql_t = "SELECT 
     SUM(CASE WHEN departamento = '01' THEN monto END) Chuquisaca,
     SUM(CASE WHEN departamento = '02' THEN monto END) La_Paz,
@@ -26,24 +31,22 @@
         echo "</tr>";
         
     }
-    /*
-    $filaAd = mysqli_fetch_array($resultadoAd);
-    print_r ($filaAd['La_Paz']);
-    $departamentos = array();
-    foreach ($filaAd as $key => $value) {
-        // Extraer el nombre del departamento de la clave y reemplazar los guiones bajos por espacios
-        $nombre_departamento = str_replace('_', ' ', $key);
-        // Convertir el nombre del departamento a mayúsculas
-        $nombre_departamento = ucwords(strtolower($nombre_departamento));
-        // Agregar el nombre del departamento al arreglo $departamentos
-        $departamentos[] = $nombre_departamento;
+}else{
+    $sqlAd = "SELECT  c.idCuenta, c.nroCuenta, c.tipoCuenta, c.departamento, c.monto, p.fCreacion 
+        FROM PERSONA p JOIN CUENTA c 
+        ON p.idUsuario = c.idUsuario 
+        WHERE p.email = '$email'";
+    $resultadoAd = mysqli_query($con, $sqlAd);
+    while($filaAd = mysqli_fetch_array($resultadoAd)){            
+        echo "<tr>";
+        echo "<td>" . $filaAd['nroCuenta'] . "</td>";
+        echo "<td>" . $filaAd['tipoCuenta'] . "</td>";
+        echo "<td>" . $filaAd['monto'] . "</td>";
+        echo "<td>" . $filaAd['departamento'] . "</td>";
+        echo "<td>" . $filaAd['fCreacion'] . "</td>";
+        echo "</tr>";
     }
-
-    print_r($departamentos);
-
-    echo $departamentos[0];
+}
     
-*/
-
-    
+   
 ?>

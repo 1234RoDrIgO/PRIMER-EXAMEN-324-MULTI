@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.boton-cerrar-sesion {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul llamativo */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.boton-cerrar-sesion:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Estilos para colocar el botón en la esquina superior derecha */
+.boton-cerrar-sesion {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+}
+
+.boton-anadir {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Celeste llamativo */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.boton-anadir:hover {
+    background-color: #0056b3; /* Celeste más oscuro al pasar el mouse */
+}
+
+.boton-eliminar, .boton-editar {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.boton-eliminar {
+    background-color: #dc3545; /* Rojo llamativo */
+}
+
+.boton-editar {
+    background-color: #007bff; /* Azul llamativo */
+}
+
+.boton-eliminar:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+}
+
+.boton-editar:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+.tabla-container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: left;
+}
+
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-datos th,
+.tabla-datos td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-datos th {
+    background-color: #1d5675;
+    color: #fff;
+}
+
+.tabla-datos tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-datos tbody tr:hover {
+    background-color: #ddd;
+}
+

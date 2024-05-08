@@ -17,7 +17,11 @@ $filas=mysqli_fetch_array($resultado);
 
 if($filas['tipoUsuario'] == 'admin'){
     header("location:admin.php?email=". urlencode($usuario));
-}else{    
+}else
+if($filas['tipoUsuario'] == 'cliente'){
+    header("location:cliente.php?email=". urlencode($usuario));
+}
+else{    
     header("location:index.php");
 }
 mysqli_free_result($resultado);

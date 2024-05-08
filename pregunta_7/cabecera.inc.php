@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PREGUNTA 7</title>
-    <link rel="stylesheet" href="estilos/estilosP6.css">
+    <link rel="stylesheet" href="estilos/estilosP7.css">
 </head>
 <body>
     <div class="tabla-container">   
         <h2>PREGUNTA : 7</h2>
         <h3>7. En el rol director bancario, permita visualizar los montos existentes por departamento(agregados), dando la vuelta al resultado (CASE-WHEN).</h3>
-            
+        <a href="index.php" class="boton-cerrar-sesion">CERRAR SESION</a>  
         <?php 
             include "conexion.inc.php";                                   
         ?>
