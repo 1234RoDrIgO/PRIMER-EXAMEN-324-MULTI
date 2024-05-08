@@ -10,7 +10,7 @@
     <div class="tabla-container">   
         <h2>PREGUNTA : 6</h2>
         <h3>6. En la Aplicacion incluya el manejo de sesiones por roles.</h3>
-            
+        <a href="index.php" class="boton-cerrar-sesion">CERRAR SESION</a>    
         <?php 
             include "conexion.inc.php";                                   
         ?>
